@@ -2,7 +2,7 @@
 /*
 	shorthash
 	(c) 2013 Bibig
-	
+
 	https://github.com/bibig/node-shorthash
 	shorthash may be freely distributed under the MIT license.
 */
@@ -32,28 +32,28 @@ function binaryTransfer(integer, binary) {
 	var num;
 	var result = '';
 	var sign = integer < 0 ? '-' : '';
-	
+
 	function table (num) {
-		var t = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		var t = Array.from('いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせすんばびぶべぼがぎぐげござじずぜ');
 		return t[num];
 	}
-	
+
 	integer = Math.abs(integer);
-	
+
 	while (integer >= binary) {
 		num = integer % binary;
 		integer = Math.floor(integer / binary);
 		stack.push(table(num));
 	}
-	
+
 	if (integer > 0) {
 		stack.push(table(integer));
 	}
-	
+
 	for (var i = stack.length - 1; i >= 0; i--) {
 		result += stack[i];
-	} 
-	
+	}
+
 	return sign + result;
 }
 
@@ -64,5 +64,5 @@ function binaryTransfer(integer, binary) {
  */
 function unique (text) {
 	var id = binaryTransfer(bitwise(text), 61);
-	return id.replace('-', 'Z');
+	return id.replace('-', 'ぜ');
 }

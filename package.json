@@ -1,18 +1,13 @@
 {
-	"author": {
-		"name": "Bibig",
-		"email": "bibig@me.com",
-		"url": "https://twitter.com/bibig"
-	  },
-    "name": "shorthash",
-    "version": "0.0.4",
+    "author": "notoiro",
+    "name": "shorthash-jp",
+    "version": "0.0.4-1",
     "description": "generate a short unique hash based on a long string",
-    "preferGlobal": "true",
     "main": "index.js",
     "keywords": ["hash", "shorthash"],
     "repository" : {
         "type": "git",
-        "url": "https://github.com/bibig/node-shorthash.git"
+        "url": "https://github.com/notoiro/node-shorthash.git"
     },
     "license": "MIT",
     "readmeFilename": "README.md",
